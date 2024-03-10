@@ -335,7 +335,7 @@ nav a {
 .personal-item-content-right-box ul {
   margin: 0 !important;
 }
-.personal-slide-item{
+.personal-slide-item {
   height: 670px;
 }
 .personal-item-btn-box {
@@ -347,6 +347,9 @@ nav a {
   border-radius: 30px;
   color: white;
   transition: 0.4s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 .personal-item-btn-box a:first-of-type {
   background-color: rgba(220, 20, 60, 0.9);
@@ -359,6 +362,23 @@ nav a {
 }
 .personal-item-btn-box a:last-of-type:hover {
   background-color: rgb(65, 105, 225);
+}
+/* personal slide custom */
+#personal .slick-arrow {
+  z-index: 100;
+}
+#personal .slick-arrow::before {
+  color: #ff7262;
+  transition: 0.4s;
+}
+#personal .slick-arrow:hover::before {
+  color: #ff8c00;
+}
+#personal .slick-prev{
+  left: 6px;
+}
+#personal .slick-next{
+  right: 6px;
 }
 /* epilogue */
 #epilogue {
@@ -555,46 +575,71 @@ nav a {
   .skill-item:nth-of-type(5) {
     border-left: none;
   }
-  /* team */
+  /* team, personal */
   .team-items {
     gap: 18px;
   }
-  .team-item {
+  .team-item,
+  .personal-slide-item {
     padding: 16px;
   }
-  .team-item-title-box {
+  .team-item-title-box,
+  .personal-item-title-box {
     gap: 0;
   }
-  .team-pro-name h1 {
+  .team-pro-name h1,
+  .personal-pro-name h1 {
     font-size: 16px;
   }
-  .team-pro-kind h3 {
+  .team-pro-kind h3,
+  .personal-pro-kind h3 {
     font-size: 20px;
   }
-  .team-item-content-box {
+  .team-item-content-box,
+  .personal-item-content-box {
     flex-direction: column;
     gap: 32px;
   }
-  .team-item-content-text strong {
+  .team-item-content-text strong,
+  .personal-item-content-text strong {
     font-size: 14px;
   }
   .team-item-content-text span,
-  .team-item-content-text a {
+  .team-item-content-text a,
+  .personal-item-content-text span,
+  .personal-item-content-text a {
     font-size: 14px;
   }
-  .team-item-content-right-box > div {
+  .team-item-content-right-box > div,
+  .personal-item-content-right-box > div {
     gap: 8px;
   }
-  .team-item-content-right-box > div h3 {
+  .team-item-content-right-box > div h3,
+  .personal-item-content-right-box > div h3 {
     font-size: 16px;
   }
   .team-item-content-right-box > div p,
-  .team-item-content-right-box > div ul li {
+  .team-item-content-right-box > div ul li,
+  .personal-item-content-right-box > div p,
+  .personal-item-content-right-box > div ul li {
     font-size: 14px;
+  }
+  .personal-slide-item {
+    height: auto;
+  }
+  .personal-item-btn-box a{
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  .personal-item-btn-box a i{
+    font-size: 8px;
+  }
+  #personal .slick-arrow::before{
+    display: none;
   }
   /* top-btn */
   .top-btn {
-    left: 10px;
+    right: 10px;
     bottom: 10px;
     width: 25px;
     height: 25px;
@@ -611,75 +656,60 @@ nav a {
   [class*="inner"] {
     width: 100%;
   }
-
   section {
     padding: 30px 10px;
   }
-
   /* header */
   header {
     padding: 15px;
   }
-
   nav {
     gap: 8px;
   }
-
+  /* about */
+  .about-all-box {
+    gap: 32px;
+    background-color: white;
+    align-items: center;
+    padding: 24px;
+  }
+  .about-intro h2 {
+    font-size: 22px;
+  }
+  .about-intro p {
+    font-size: 14px;
+  }
+  .about-card-item {
+    width: 360px;
+  }
+  .about-card-item h3 {
+    font-size: 18px;
+  }
+  .about-card-item p {
+    font-size: 14px;
+  }
   /* skill */
   .skill-list {
     grid-template-columns: repeat(2, 370px);
     justify-content: center;
   }
-
   .skill-item:nth-of-type(1),
   .skill-item:nth-of-type(2),
   .skill-item:nth-of-type(3),
   .skill-item:nth-of-type(4) {
     border-bottom: 1px solid #ccc;
   }
-
   .skill-item:nth-of-type(2) {
     border-left: none;
     border-right: none;
   }
-
   .skill-item:nth-of-type(1),
   .skill-item:nth-of-type(3),
   .skill-item:nth-of-type(5) {
     border-right: 1px solid #ccc;
   }
-
   .skill-item:nth-of-type(5) {
     border-left: none;
   }
-
-  /* disign */
-  .design-item-img img {
-    width: 350px;
-    height: 300px;
-  }
-
-  .pages,
-  .label-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  input[id="tab1"]:checked ~ .pages .page1,
-  input[id="tab2"]:checked ~ .pages .page2,
-  input[id="tab3"]:checked ~ .pages .page3,
-  input[id="tab4"]:checked ~ .pages .page4,
-  input[id="tab5"]:checked ~ .pages .page5 {
-    grid-template-columns: repeat(2, 365px);
-  }
-
-  .publish-box {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .publish-img-item {
-    width: 100%;
-  }
+  
 }
