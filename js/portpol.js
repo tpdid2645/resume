@@ -22,8 +22,10 @@ $(function () {
   $('.personal-slide-box').slick({
     dots: true,
     infinite: true,
-    speed: 300,
+    speed: 500,
     slidesToShow: 1,
-    adaptiveHeight: true
+    adaptiveHeight: true,
+    autoplay:true,
+    autoplaySpeed: 4000,
   });
 });/* end : jquery */

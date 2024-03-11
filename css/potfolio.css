@@ -813,4 +813,8 @@ nav a {
   .skill-item:nth-of-type(5) {
     border-left: none;
   }
+  /* personal */
+  .personal-slide-item {
+    height: auto;
+  }
 }
